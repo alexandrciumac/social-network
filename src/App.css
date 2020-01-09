@@ -1,0 +1,65 @@
+.header {
+  text-align: center;
+}
+
+.toast {
+  margin: 0 auto;
+}
+
+.footer {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: #212529;
+  margin-top: 50px;
+  color: white;
+  left: 0;
+  bottom: 0;
+}
+
+.pos-left {
+  float: left;
+  max-width: 70%;
+}
+
+.pos-right {
+  float: right;
+  max-width: 70%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.chat-bg {
+  background-color: rgb(231, 231, 231);
+}
+
+
+
+/* START CHAT */
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.messages-box,
+.chat-box {
+  height: 510px;
+  overflow-y: scroll;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+input::placeholder {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* END CHAT */
+
+/* START LIKE */
+
+/* END LIKE */
