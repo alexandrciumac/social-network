@@ -26,7 +26,7 @@ const Header = () => (
       <Nav className="mr-auto">
         <NavLink className="nav-link" to="/profile">Profile</NavLink>
         <NavLink className="nav-link" to="/dialogs">Messages</NavLink>
-        <NavLink className="nav-link" to="/dialogss">News</NavLink>
+        <NavLink className="nav-link" to="/news">News</NavLink>
         <NavLink className="nav-link" to="/dialogss">Music</NavLink>
         <NavDropdown title="Settings" id="basic-nav-dropdown">
           <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

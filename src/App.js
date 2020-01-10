@@ -5,6 +5,7 @@ import Footer from "./components/Footer"
 import Dialogs from "./components/Dialogs"
 import "./App.css";
 import { Route, BrowserRouter } from "react-router-dom";
+import WeatherWidget from "./components/WeatherWidget";
 
 const App = () => (
   <BrowserRouter>
@@ -13,7 +14,9 @@ const App = () => (
       <div>
       <Route path="/profile" component={Profile} />
       <Route path="/dialogs" component={Dialogs} />
+      <Route path="/news" component={WeatherWidget} />
       </div>
+
       <Footer />
     </div>
   </BrowserRouter>

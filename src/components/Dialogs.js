@@ -19,7 +19,7 @@ return (
       </div>
     </NavLink>
   </div>
-)
+);
 }
 
 const IncomeMessages = (props) => {
@@ -50,24 +50,61 @@ const OutcomeMessages = (props) => {
 
 
 const Dialogs = (props) => {
+
 let dialogsData = [
   {id: 1, name: 'Alex', image: userImage, date: 'Feb 14', shortText:'Test which is a new approach all solutions'},
   {id: 2, name: 'Dmitry', image: userImage, date: 'Feb 18', shortText:'Test which is a new approach all solutions'},
   {id: 3, name: 'Paul', image: userImage, date: 'Feb 21', shortText:'Test which is a new approach all solutions'},
-]
+];
+
+let DialogElements = dialogsData
+.map (dialog => <Contacts id={dialog.id} name={dialog.name} image={dialog.image} date={dialog.date} shortText={dialog.shortText}/>);
 
 let IncomeMessagesData = [
   {id: 1, message: 'Hello, brother, how are you?', time: '12:00 PM', date: 'Feb 1'},
   {id: 2, message: 'I am good , you?', time: '12:00 PM', date: 'Feb 5'},
   {id: 3, message: 'Good, bro!', time: '12:00 PM', date: 'Feb 8'}
-]
+];
 
 let OutcomeMessagesData = [
   {id: 1, message: 'Hello, brother!', time: '12:00 PM', date: 'Feb 19'},
   {id: 2, message: 'I am good , you?', time: '12:00 PM', date: 'Feb 22'},
   {id: 3, message: 'Nice.', time: '12:00 PM', date: 'Feb 24'}
-]
+];
 
+let MessagesData = [
+  {id: 1, message: 'Hello, brother!', time: '12:00 PM', date: 'Feb 19', income: 1},
+  {id: 2, message: 'I am good , you?', time: '12:00 PM', date: 'Feb 22', income: 1},
+  {id: 3, message: 'Nice.', time: '12:00 PM', date: 'Feb 24', income: 0}
+];
+
+let IncomeMessagesElements = IncomeMessagesData
+.map(message => <IncomeMessages id={message.id} message={message.message} time={message.time} date={message.date}/>)
+let OutcomeMessagesElements = OutcomeMessagesData
+.map(message => <OutcomeMessages id={message.id} message={message.message} time={message.time} date={message.date}/>)
+// let InMessagesElements = MessagesData
+// .map(message => <IncomeMessages id={message.id} message={message.message} time={message.time} date={message.date}/>)
+// let OutMessagesElements = MessagesData
+// .map(message => <OutcomeMessages id={message.id} message={message.message} time={message.time} date={message.date}/>)
+
+// let chat = function getChat() {
+//   if (MessagesData.income = 1) {
+//     return InMessagesElements;
+//   }
+//   else {
+//     return OutMessagesElements;
+//   }
+// }
+
+// let getChat = function getChaty() {
+//   let length = 0;
+//   for (let i = 0; i < MessagesData.length; i++) {
+//     if (MessagesData.income = 1) {
+//       return InMessagesElements;
+//     }
+//   }
+//   return OutMessagesElements;
+// }
 
 return (
     <div className="container py-5 px-4">
@@ -82,10 +119,8 @@ return (
                 <div className="messages-box">
                   <div className="list-group rounded-0">
 
-                    <Contacts id={dialogsData[0].id} name={dialogsData[0].name} image={dialogsData[0].image} date={dialogsData[0].date} shortText={dialogsData[0].shortText}/>
-                    <Contacts id={dialogsData[1].id} name={dialogsData[1].name} image={dialogsData[1].image} date={dialogsData[1].date} shortText={dialogsData[1].shortText}/>
-                    <Contacts id={dialogsData[2].id} name={dialogsData[2].name} image={dialogsData[2].image} date={dialogsData[2].date} shortText={dialogsData[2].shortText}/>
-                    
+                  {DialogElements}
+
                    </div>
                 </div>
               </div>
@@ -93,15 +128,9 @@ return (
 
         <div className="col-7 px-0">
         <div className="px-4 py-5 chat-box bg-white">
-{/* ОШИБКА В КОДЕ, НЕ ВЫВОДИТ СООБЩЕНИЯ */}
-          <IncomeMessages id={IncomeMessagesData[0].id} message={IncomeMessagesData[0].message} time={IncomeMessagesData[0].time} date={IncomeMessagesData[0].date}/>
-          <OutcomeMessages id={OutcomeMessagesData[0].id} message={OutcomeMessagesData[0].message} time={OutcomeMessagesData[0].time} date={OutcomeMessagesData[0].date}/>
-          <OutcomeMessages id={OutcomeMessagesData[1].id} message={OutcomeMessagesData[1].message} time={OutcomeMessagesData[1].time} date={OutcomeMessagesData[1].date}/>
-          <IncomeMessages id={IncomeMessagesData[1].id} message={IncomeMessagesData[1].message} time={IncomeMessagesData[1].time} date={IncomeMessagesData[1].date}/>
-          <OutcomeMessages id={OutcomeMessagesData[2].id} message={OutcomeMessagesData[2].message} time={OutcomeMessagesData[2].time} date={OutcomeMessagesData[2].date}/>
-          <IncomeMessages id={IncomeMessagesData[2].id} message={IncomeMessagesData[2].message} time={IncomeMessagesData[2].time} date={IncomeMessagesData[2].date}/>
 
-
+        {IncomeMessagesElements}
+        {OutcomeMessagesElements}
 
         </div>
 

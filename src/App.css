@@ -60,6 +60,12 @@ input::placeholder {
 
 /* END CHAT */
 
-/* START LIKE */
+.singlePost {
+  color: red;
+  padding-top: 50px;
+}
 
-/* END LIKE */
+.pt-500 {
+  height: 100%;
+}
+

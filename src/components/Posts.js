@@ -11,6 +11,8 @@ let postsData = [
     {id: 3, name:'Alexandro', date:'December 28', message:'Lorem text', likes:25}
 ]
 
+let postElements = postsData.map(p => <SinglePost id={p.id} name={p.name} date={p.date} message={p.message} likes={p.likes} />)
+
     return (
         <div>
             <Form>
@@ -23,10 +25,7 @@ let postsData = [
                 </Button>
             </Form>
             <br></br>
-            <SinglePost id={postsData[0].id} name={postsData[0].name} date={postsData[0].date} message={postsData[0].message} likes={postsData[0].likes} />
-            <SinglePost id={postsData[1].id} name={postsData[1].name} date={postsData[1].date} message={postsData[1].message} likes={postsData[1].likes} />
-            <SinglePost id={postsData[2].id} name={postsData[2].name} date={postsData[2].date} message={postsData[2].message} likes={postsData[2].likes} />
-
+            {postElements}
         </div>
     );
 }
